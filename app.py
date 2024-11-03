@@ -32,7 +32,6 @@ with col1:
         st_lottie(lottie_animation, height=100)
     else:
         st.write("Lottie animation could not be loaded.")
-
 with col2:
     st.title("Stock Closing Prediction")
 
@@ -43,7 +42,6 @@ with col1:
     weekly_change = st.number_input('Weekly Change')
     avg_price = st.number_input('Average Price')
     volatility = st.number_input('Volatility')
-
 with col2:
     volume = st.number_input('Volume')
     price_range = st.number_input('Price Range')
@@ -54,10 +52,12 @@ if st.button("Predict"):
     # Prepare the input data
     input_data = np.array([[high_price, weekly_change, volume, price_range, avg_price, open_price, volatility]])
     input_data_poly = poly.transform(input_data)
-
     # Make prediction
     prediction = model.predict(input_data_poly)
-
     # Display the prediction
     st.subheader("Predicted Closing Price:")
     st.write(prediction[0])
+
+# Footer
+st.markdown("---")  # Optional: Add a horizontal line before the footer
+st.write("Project Completed By ѕтяαηgєr and Arman.")
