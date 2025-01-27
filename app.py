@@ -60,6 +60,6 @@ if st.button("Predict"):
 
 # Footer
 st.markdown("---")  # Optional: Add a horizontal line before the footer
-st.write("Project Completed By ѕтяαηgєr and Arman.")
+st.write("Project Completed By white Hat Team")
 
 
